@@ -26,13 +26,6 @@
             <v-btn :to="`/food/${food.id}?view`" color="primary" variant="text">
               View Details
             </v-btn>
-            <v-btn :to="`/food/${food.id}?edit`" color="secondary" variant="text">
-              Edit
-            </v-btn>
-
-            <v-btn @click="deleteFood(food.id)" color="error" variant="text">
-              Delete
-            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
