@@ -15,11 +15,22 @@
                     </v-card-title>
                     <v-card-text>
                         {{ selectedFoodData.description }}
+
+                        <div class="mt-2">
+                            <v-chip prepend-icon="mdi-food-apple" :color="getPreparationColor(
+                                selectedFoodData.preparation.length === 1
+                                    ? selectedFoodData.preparation[0]
+                                    : 'multiple'
+                            )" variant="tonal" size="small" class="text-white">
+                                {{ getPreparationLabel(selectedFoodData.preparation) }}
+                            </v-chip>
+                        </div>
+
                     </v-card-text>
                     <v-card-actions>
-                        <v-chip :color="selectedFoodData.can_eat ? 'success' : 'error'"
+                        <v-chip variant="elevated" :color="selectedFoodData.can_eat ? 'success' : 'error'"
                             :text="selectedFoodData.can_eat ? 'Safe to eat' : 'Not recommended'" />
-                        <v-chip :color="getQuantityColor(selectedFoodData.quantity)"
+                        <v-chip variant="tonal" :color="getQuantityColor(selectedFoodData.quantity)"
                             :text="getQuantityLabel(quantityList, selectedFoodData.quantity)" />
                     </v-card-actions>
                 </v-card>
@@ -41,11 +52,44 @@ const selectedFoodData = ref(null)
 const loading = ref(false)
 const error = ref('')
 const quantityList = ref([
-    { value: 'free', label: 'Freely' }, 
-    { value: 'moderate', label: 'In moderation' }, 
+    { value: 'free', label: 'Freely' },
+    { value: 'moderate', label: 'In moderation' },
     { value: 'rarely', label: 'Rarely' },
     { value: 'never', label: 'Never' }
 ])
+
+const preparationList = ref([
+    { value: 'raw', label: 'Crudo' },
+    { value: 'cooked', label: 'Cotto' },
+    { value: 'dried', label: 'Essiccato' },
+    { value: 'canned', label: 'In scatola' },
+    { value: 'frozen', label: 'Congelato' },
+    { value: 'multiple', label: 'Più metodi' }
+])
+
+const getPreparationColor = (type) => {
+    switch (type) {
+        case 'raw': return 'green'
+        case 'cooked': return 'orange'
+        case 'dried': return 'brown'
+        case 'canned': return 'blue-grey'
+        case 'frozen': return 'cyan'
+        case 'multiple': return 'purple'
+        default: return 'grey'
+    }
+}
+
+const getPreparationLabel = (prepArray) => {
+    if (!prepArray || prepArray.length === 0) return 'Sconosciuto'
+
+    return prepArray
+        .map(value => {
+            const item = preparationList.value.find(p => p.value === value)
+            return item ? item.label : value
+        })
+        .join(', ')
+}
+
 
 const getQuantityColor = (quantity) => {
     switch (quantity) {

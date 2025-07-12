@@ -18,7 +18,7 @@
                 </div>
 
                 <div v-else-if="food">
-                    <v-row class="" align="center">
+                    <v-row align="center">
                         <v-col cols="12">
                             <v-chip :color="food.can_eat ? 'green' : 'red'" dark size="large" prepend-icon="mdi-food">
                                 {{ food.can_eat ? 'Safe to eat' : 'Not recommended' }}
@@ -28,8 +28,15 @@
 
                     <v-row>
                         <v-col cols="12">
-                            <h3 class="">Description</h3>
+                            <h3>Description</h3>
                             <p class="text-body-1">{{ food.description }}</p>
+                        </v-col>
+
+                         <v-col cols="12" v-if="food.preparation?.length">
+                            <h3 class="mb-2">Preparation</h3>
+                            <p class="text-body-1">
+                                {{ food.preparation.map(preparationLabel).join(', ') }}
+                            </p>
                         </v-col>
 
                         <v-col cols="12">
@@ -39,7 +46,6 @@
                                 {{ quantityLabel(food.quantity) }}
                             </v-chip>
                         </v-col>
-
                     </v-row>
                 </div>
 
@@ -71,6 +77,15 @@ const quantityList = [
     { value: 'never', label: 'Never' }
 ]
 
+const preparationList = [
+    { value: 'raw', label: 'Crudo' },
+    { value: 'cooked', label: 'Cotto' },
+    { value: 'dried', label: 'Essiccato' },
+    { value: 'canned', label: 'In scatola' },
+    { value: 'frozen', label: 'Congelato' },
+    { value: 'multiple', label: 'Più metodi' }
+]
+
 const quantityLabel = (value) => {
     const found = quantityList.find(q => q.value === value)
     return found ? found.label : value
@@ -82,6 +97,23 @@ const quantityColor = (value) => {
         case 'moderate': return 'amber'
         case 'rarely': return 'deep-orange'
         case 'never': return 'red'
+        default: return 'grey'
+    }
+}
+
+const preparationLabel = (value) => {
+    const found = preparationList.find(p => p.value === value)
+    return found ? found.label : value
+}
+
+const preparationColor = (type) => {
+    switch (type) {
+        case 'raw': return 'teal'
+        case 'cooked': return 'orange'
+        case 'dried': return 'brown'
+        case 'canned': return 'blue-grey'
+        case 'frozen': return 'cyan'
+        case 'multiple': return 'purple'
         default: return 'grey'
     }
 }

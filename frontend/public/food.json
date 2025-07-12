@@ -4,13 +4,63 @@
     "name": "Mela",
     "can_eat": true,
     "description": "Buona per i ratti",
-    "quantity": "moderate"
+    "quantity": "moderate",
+    "preparation": ["raw"]
   },
   {
     "id": 2,
     "name": "Cioccolato",
     "can_eat": false,
     "description": "Tossico per i ratti",
-    "quantity": "never"
+    "quantity": "never",
+    "preparation": []
+  },
+  {
+    "id": 3,
+    "name": "Aglio",
+    "can_eat": true,
+    "description": "Può essere dato raramente. Ha proprietà antibatteriche, vermifughe e abbassa colesterolo e zuccheri.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 4,
+    "name": "Agrumi",
+    "can_eat": true,
+    "description": "Solo per femmine, in piccole dosi. Per i maschi può essere cancerogeno. Ricchi di zuccheri.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 5,
+    "name": "Albicocca",
+    "can_eat": true,
+    "description": "Ottima fonte di vitamine. Togliere nocciolo. Pericolosa per i ratti maschi per il contenuto di D-limonene.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 6,
+    "name": "Anguria",
+    "can_eat": true,
+    "description": "Ricca di liquidi, perfetta d'estate. Da somministrare con moderazione per l’alto contenuto di zuccheri.",
+    "quantity": "moderate",
+    "preparation": ["raw", "frozen"]
+  },
+  {
+    "id": 7,
+    "name": "Asparagi",
+    "can_eat": true,
+    "description": "Fonte di vitamina K e composti con effetto anti-tumorale. Si possono dare crudi o cotti.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 8,
+    "name": "Avocado",
+    "can_eat": true,
+    "description": "Ad alto contenuto calorico, utile per ratti debilitati. Togliere nocciolo e buccia (tossici).",
+    "quantity": "rarely",
+    "preparation": ["raw"]
   }
 ]

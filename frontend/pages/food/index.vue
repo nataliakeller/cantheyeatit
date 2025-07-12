@@ -8,18 +8,28 @@
             {{ food.name }}
           </v-card-title>
 
-          <v-card-subtitle>
+          <v-card-subtitle class="ma-1">
             {{ food.description }}
           </v-card-subtitle>
 
           <v-card-text>
-            <v-chip class="ma-1" :color="food.can_eat ? 'success' : 'error'" variant="elevated">
+            <v-chip size="small" class="ma-1" :color="food.can_eat ? 'success' : 'error'" variant="tonal">
               {{ food.can_eat ? 'They can eat this' : 'Not recommended' }}
             </v-chip>
 
-            <v-chip class="ma-1" :color="getQuantityColor(food.quantity)" variant="outlined">
+            <v-chip size="small" class="ma-1" :color="getQuantityColor(food.quantity)" variant="outlined">
               {{ getQuantityLabel(food.quantity) }}
             </v-chip>
+            <div class="ma-1 mt-2">
+              <v-chip v-if="food.preparation?.length" size="x-small" prepend-icon="mdi-food-apple" :color="getPreparationColor(
+                food.preparation.length === 1
+                  ? food.preparation[0]
+                  : 'multiple'
+              )" variant="tonal" class="pa-3">
+                {{ getPreparationLabel(food.preparation) }}
+              </v-chip>
+            </div>
+
           </v-card-text>
 
           <v-card-actions>
@@ -59,6 +69,38 @@ const getQuantityColor = (value) => {
     case 'never': return 'error'
     default: return 'grey'
   }
+}
+
+const preparationList = ref([
+  { value: 'raw', label: 'Crudo' },
+  { value: 'cooked', label: 'Cotto' },
+  { value: 'dried', label: 'Essiccato' },
+  { value: 'canned', label: 'In scatola' },
+  { value: 'frozen', label: 'Congelato' },
+  { value: 'multiple', label: 'Più metodi' }
+])
+
+const getPreparationColor = (type) => {
+  switch (type) {
+    case 'raw': return 'teal'
+    case 'cooked': return 'lime'
+    case 'dried': return 'brown'
+    case 'canned': return 'blue-grey'
+    case 'frozen': return 'cyan'
+    case 'multiple': return 'purple'
+    default: return 'grey'
+  }
+}
+
+const getPreparationLabel = (prepArray) => {
+  if (!prepArray || prepArray.length === 0) return 'Non specificato'
+
+  return prepArray
+    .map(value => {
+      const item = preparationList.value.find(p => p.value === value)
+      return item ? item.label : value
+    })
+    .join(', ')
 }
 
 
