@@ -2,7 +2,14 @@
   <v-container fluid>
     <v-alert v-if="error" type="error" class="mb-4" :text="error" />
     <v-row>
-      <v-col v-for="food in foods" :key="food.id" cols="12" sm="6" md="4" lg="3">
+      <v-col
+        v-for="food in paginatedFoods"
+        :key="food.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+      >
         <v-card class="h-100">
           <v-card-title class="text-h6">
             {{ food.name }}
@@ -13,19 +20,36 @@
           </v-card-subtitle>
 
           <v-card-text>
-            <v-chip size="small" class="ma-1" :color="food.can_eat ? 'success' : 'error'" variant="tonal">
+            <v-chip
+              size="small"
+              class="ma-1"
+              :color="food.can_eat ? 'success' : 'error'"
+              variant="tonal"
+            >
               {{ food.can_eat ? 'They can eat this' : 'Not recommended' }}
             </v-chip>
 
-            <v-chip size="small" class="ma-1" :color="getQuantityColor(food.quantity)" variant="outlined">
+            <v-chip
+              size="small"
+              class="ma-1"
+              :color="getQuantityColor(food.quantity)"
+              variant="outlined"
+            >
               {{ getQuantityLabel(food.quantity) }}
             </v-chip>
             <div class="ma-1 mt-2">
-              <v-chip v-if="food.preparation?.length" size="x-small" prepend-icon="mdi-food-apple" :color="getPreparationColor(
-                food.preparation.length === 1
-                  ? food.preparation[0]
-                  : 'multiple'
-              )" variant="tonal" class="pa-3">
+              <v-chip
+                v-if="food.preparation?.length"
+                size="x-small"
+                prepend-icon="mdi-food-apple"
+                :color="getPreparationColor(
+                  food.preparation.length === 1
+                    ? food.preparation[0]
+                    : 'multiple'
+                )"
+                variant="tonal"
+                class="pa-3"
+              >
                 {{ getPreparationLabel(food.preparation) }}
               </v-chip>
             </div>
@@ -40,34 +64,65 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <v-row justify="center">
+      <v-pagination
+        v-model="page"
+        :length="pageCount"
+        :total-visible="5"
+        class="mt-4"
+      />
+    </v-row>
   </v-container>
 </template>
 
 <script setup>
+import { ref, onMounted, computed } from 'vue'
 const { foods: foodsApi } = useApi()
 
 const foods = ref([])
 const error = ref('')
 
-const quantityList = [
-  { value: 'free', label: 'Freely' },
-  { value: 'moderate', label: 'In moderation' },
-  { value: 'rarely', label: 'Rarely' },
-  { value: 'never', label: 'Never' }
-]
+// Pagination state
+const page = ref(1)
+const itemsPerPage = ref(8) // number of cards per page
+
+const paginatedFoods = computed(() => {
+  const start = (page.value - 1) * itemsPerPage.value
+  return foods.value.slice(start, start + itemsPerPage.value)
+})
+
+const pageCount = computed(() => {
+  return Math.ceil(foods.value.length / itemsPerPage.value)
+})
+
+const quantityList = ref([
+  { value: 'free',     label: 'A volontà' },
+  { value: 'moderate', label: 'Con moderazione' },
+  { value: 'rarely',   label: 'Rarely' },
+  { value: 'treat',    label: 'Premietto' },
+  { value: 'never',    label: 'Never' }
+])
 
 const getQuantityLabel = (value) => {
-  const found = quantityList.find(q => q.value === value)
+  const found = quantityList.value.find(q => q.value === value)
   return found ? found.label : 'Unknown'
 }
 
-const getQuantityColor = (value) => {
-  switch (value) {
-    case 'free': return 'success'
-    case 'moderate': return 'warning'
-    case 'rarely': return 'deep-orange'
-    case 'never': return 'error'
-    default: return 'grey'
+const getQuantityColor = (quantity) => {
+  switch (quantity) {
+    case 'free':
+      return 'success'
+    case 'moderate':
+      return 'warning'
+    case 'rarely':
+      return 'deep-orange'
+    case 'treat':
+      return 'pink-accent-1'
+    case 'never':
+      return 'error'
+    default:
+      return 'grey'
   }
 }
 
@@ -102,7 +157,6 @@ const getPreparationLabel = (prepArray) => {
     })
     .join(', ')
 }
-
 
 onMounted(async () => {
   try {

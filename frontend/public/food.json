@@ -12,7 +12,7 @@
     "name": "Cioccolato",
     "can_eat": false,
     "description": "Tossico per i ratti",
-    "quantity": "never",
+    "quantity": "treat",
     "preparation": []
   },
   {
@@ -62,5 +62,501 @@
     "description": "Ad alto contenuto calorico, utile per ratti debilitati. Togliere nocciolo e buccia (tossici).",
     "quantity": "rarely",
     "preparation": ["raw"]
+  },
+  {
+    "id": 9,
+    "name": "Basilico",
+    "can_eat": true,
+    "description": "Erbacea aromatica poco apprezzata, ma commestibile in foglie e steli.",
+    "quantity": "moderate",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 10,
+    "name": "Bambù",
+    "can_eat": true,
+    "description": "Germogli in scatola o cotti; anche i culmi possono essere usati come arricchimento in gabbia.",
+    "quantity": "moderate",
+    "preparation": ["canned", "cooked"]
+  },
+  {
+    "id": 11,
+    "name": "Banana",
+    "can_eat": true,
+    "description": "Ricca di potassio e calorie, utile per ratti in convalescenza o sotto farmaci; da limitare in caso di problemi renali.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked", "dried"]
+  },
+  {
+    "id": 12,
+    "name": "Barbabietola",
+    "can_eat": true,
+    "description": "Fonte di vitamina C e antiossidanti; può colorare l’urina, niente paura.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 13,
+    "name": "Bietole/Coste",
+    "can_eat": true,
+    "description": "Ricche di vitamine C e K, potassio e ferro; attenzione agli ossalati.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 14,
+    "name": "Broccolo",
+    "can_eat": true,
+    "description": "Antiossidante e anti-tumorale; può causare gonfiore addominale se somministrato spesso.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 15,
+    "name": "Carciofi",
+    "can_eat": true,
+    "description": "Proprietà antiossidanti e depurative; basso in calorie, ricco di vitamine e minerali.",
+    "quantity": "moderate",
+    "preparation": ["cooked"]
+  },
+  {
+    "id": 16,
+    "name": "Carote",
+    "can_eat": true,
+    "description": "Fonte di carotenoidi e vitamina C; molto gradite anche essiccate.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked", "dried"]
+  },
+  {
+    "id": 17,
+    "name": "Catalogna",
+    "can_eat": true,
+    "description": "Varietà di cicoria ricca di fibre, vitamine e minerali; da dare ogni 2–3 giorni.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 18,
+    "name": "Cavolo (cappuccio, rosso, verza)",
+    "can_eat": true,
+    "description": "Ricchi di vitamine, calcio e ferro; possono dare gonfiore addominale.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 19,
+    "name": "Cavoletti di Bruxelles",
+    "can_eat": true,
+    "description": "Antiossidanti, fonte di vitamine A, C ed E; da proporre con moderazione.",
+    "quantity": "moderate",
+    "preparation": ["cooked"]
+  },
+  {
+    "id": 20,
+    "name": "Cavolfiore",
+    "can_eat": true,
+    "description": "Proprietà antiossidanti e anti-tumorali; ideale per ratti con problemi di diabete.",
+    "quantity": "freely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 21,
+    "name": "Cavolo cinese (Pak-Choi)",
+    "can_eat": true,
+    "description": "Ricco di calcio e rame, ottimo per ratti in crescita.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 22,
+    "name": "Cavolo nero",
+    "can_eat": true,
+    "description": "Fonte di ferro, vitamine (soprattutto K) e calcio; contiene fibre che possono gonfiare.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 23,
+    "name": "Ceci",
+    "can_eat": true,
+    "description": "Ricchi di proteine e rame; devono essere cotti o in scatola, mai crudi.",
+    "quantity": "moderate",
+    "preparation": ["canned", "cooked"]
+  },
+  {
+    "id": 24,
+    "name": "Cetriolo",
+    "can_eat": true,
+    "description": "Ricco di liquidi e minerali, ottimo diuretico e rinfrescante in viaggio.",
+    "quantity": "freely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 25,
+    "name": "Cicorie (indivia, scarola, belga, radicchio)",
+    "can_eat": true,
+    "description": "Ricche di vitamine e minerali; possono essere date quotidianamente.",
+    "quantity": "freely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 26,
+    "name": "Ciliegie",
+    "can_eat": true,
+    "description": "Fonte di vitamina C e antiossidanti; molto zuccherine, togliere sempre il nocciolo perché contiene cianuro.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 27,
+    "name": "Cipolla/Cipollotto/Scalogno",
+    "can_eat": true,
+    "description": "Proprietà antinfiammatorie e antiossidanti; da dare cotti e con moderazione.",
+    "quantity": "rarely",
+    "preparation": ["cooked"]
+  },
+  {
+    "id": 28,
+    "name": "Cocco",
+    "can_eat": true,
+    "description": "Ricco di grassi buoni; ottimo premio o per ratti debilitati.",
+    "quantity": "rarely",
+    "preparation": ["raw", "dried"]
+  },
+  {
+    "id": 29,
+    "name": "Crescione",
+    "can_eat": true,
+    "description": "Fonte di ferro e vitamine; da dare crudo o cotto ma raramente.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 30,
+    "name": "Fagioli Azuki",
+    "can_eat": true,
+    "description": "Piccoli fagioli rossi, ricchi di minerali; possono essere germogliati, cotti o in scatola.",
+    "quantity": "moderate",
+    "preparation": ["raw", "sprouted", "canned", "cooked"]
+  },
+  {
+    "id": 31,
+    "name": "Fagioli Borlotti/Cannellini/Rossi/Bianchi di Spagna",
+    "can_eat": true,
+    "description": "Ricchi di proteine; usare bolliti o in scatola, mai crudi.",
+    "quantity": "moderate",
+    "preparation": ["canned", "cooked"]
+  },
+  {
+    "id": 32,
+    "name": "Fagioli Mung",
+    "can_eat": true,
+    "description": "Piccoli fagioli verdi; possono essere germogliati, crudi, in scatola o cotti.",
+    "quantity": "moderate",
+    "preparation": ["raw", "sprouted", "canned", "cooked"]
+  },
+  {
+    "id": 33,
+    "name": "Fagiolini",
+    "can_eat": true,
+    "description": "Ricchi di fibre, possono essere dati crudi o cotti.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 34,
+    "name": "Fave",
+    "can_eat": true,
+    "description": "Ricche di carboidrati; bollite o in scatola, mai crude.",
+    "quantity": "moderate",
+    "preparation": ["canned", "cooked"]
+  },
+  {
+    "id": 35,
+    "name": "Fiori commestibili",
+    "can_eat": true,
+    "description": "Ricchi di vitamine e minerali, poveri di grassi; da proporre con moderazione.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 36,
+    "name": "Finocchio",
+    "can_eat": true,
+    "description": "Ricco di acqua e fibre; da dare un paio di volte a settimana.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 37,
+    "name": "Frutta (pere, fichi, prugne, pesche, uva, kiwi)",
+    "can_eat": true,
+    "description": "Ottima fonte di vitamine e minerali; molto zuccherina, togliere noccioli e dare come premio.",
+    "quantity": "rarely",
+    "preparation": ["raw", "dried"]
+  },
+    {
+    "id": 38,
+    "name": "Frutta esotica (ananas, mango, papaya, passion fruit)",
+    "can_eat": true,
+    "description": "Molto zuccherina; proporre con moderazione. Mango non per maschi (alto D-limonene), semi tossici da rimuovere.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 39,
+    "name": "Frutta secca (noci, nocciole, mandorle)",
+    "can_eat": true,
+    "description": "Ricca di vitamine, proteine, Omega3/6; molto calorica e grassa, solo come premietto o per ratti debilitati.",
+    "quantity": "rarely",
+    "preparation": ["raw", "dried"]
+  },
+  {
+    "id": 40,
+    "name": "Frutti di bosco (fragola, mora, lampone, mirtillo, ribes, gelso)",
+    "can_eat": true,
+    "description": "Buona fonte di vitamina C e antiossidanti; basso contenuto di zuccheri, può essere somministrato più frequentemente.",
+    "quantity": "moderate",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 41,
+    "name": "Funghi",
+    "can_eat": true,
+    "description": "Pochi calorie, ricchi di minerali e rame; crudi, cotti o essiccati (solo varietà commestibili acquistate).",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked", "dried"]
+  },
+  {
+    "id": 42,
+    "name": "Germogli (di legumi)",
+    "can_eat": true,
+    "description": "Ricchi di nutrienti, perfetti per ratti in crescita; ideali crudi. Spesso fagioli mung germogliati.",
+    "quantity": "moderate",
+    "preparation": ["raw", "sprouted"]
+  },
+  {
+    "id": 43,
+    "name": "Lattuga iceberg",
+    "can_eat": false,
+    "description": "Scarso valore nutritivo, elevato contenuto d'acqua e nitrati; sconsigliata.",
+    "quantity": "never",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 44,
+    "name": "Lenticchie",
+    "can_eat": true,
+    "description": "Crude, cotte o germogliate; buone proteine, carboidrati, ferro e vitamine B.",
+    "quantity": "moderate",
+    "preparation": ["raw", "sprouted", "cooked"]
+  },
+  {
+    "id": 45,
+    "name": "Mais",
+    "can_eat": true,
+    "description": "Molto apprezzato crudo o cotto; zuccherino, moderare come premietto. Deve essere per uso umano e biologico.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 46,
+    "name": "Mela",
+    "can_eat": true,
+    "description": "Fonte di vitamina C e fibre; basso contenuto calorico e ricca di acqua; semi contenenti cianuro ma in quantità innocua. Cruda, cotta o essiccata.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked", "dried"]
+  },
+  {
+    "id": 47,
+    "name": "Melanzana",
+    "can_eat": true,
+    "description": "Solanina: moderare, preferibile cotta e sbucciata; parti verdi tossiche.",
+    "quantity": "rarely",
+    "preparation": ["cooked"]
+  },
+  {
+    "id": 48,
+    "name": "Melograno",
+    "can_eat": true,
+    "description": "Ricco di vitamina C e antiossidanti; crudo o cotto, molto apprezzato.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 49,
+    "name": "Melone",
+    "can_eat": true,
+    "description": "Antiossidante e diuretico; poche calorie ma molto zuccherino; moderare e perfetto in viaggio.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 50,
+    "name": "Patate",
+    "can_eat": true,
+    "description": "Ricche di carboidrati; somministrare cotte e con moderazione; parti verdi e buccia tossiche.",
+    "quantity": "moderate",
+    "preparation": ["cooked"]
+  },
+  {
+    "id": 51,
+    "name": "Piselli",
+    "can_eat": true,
+    "description": "Proponibili crudi, in fiocchi o cotti in tutte le loro parti.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 52,
+    "name": "Peperoni",
+    "can_eat": true,
+    "description": "Ricchi di vitamina C; crudi o cotti. Eliminare parti verdi. Peperoni piccanti tossici in grandi quantità.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 53,
+    "name": "Pomodoro",
+    "can_eat": true,
+    "description": "Ricco di vitamina C; crudo o cotto. Evitare parti verdi.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 54,
+    "name": "Porro",
+    "can_eat": true,
+    "description": "Proprietà antinfiammatorie e antiossidanti; da proporre cotto e con moderazione.",
+    "quantity": "rarely",
+    "preparation": ["cooked"]
+  },
+  {
+    "id": 55,
+    "name": "Radicchio",
+    "can_eat": true,
+    "description": "Della famiglia delle cicorie; condivide le stesse proprietà nutrizionali e modalità di somministrazione.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 56,
+    "name": "Rapa",
+    "can_eat": true,
+    "description": "Fonte di carboidrati; cruda (poco apprezzata) o cotta; moderare e indicata per ratti non in sovrappeso.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 57,
+    "name": "Ravanelli",
+    "can_eat": true,
+    "description": "Piccanti, poco apprezzati; si possono proporre con le foglie.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 58,
+    "name": "Rucola",
+    "can_eat": true,
+    "description": "Ricca di ferro, calcio e vitamine (K); sapore non gradito da tutti.",
+    "quantity": "moderate",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 59,
+    "name": "Sedano",
+    "can_eat": true,
+    "description": "Ricco di fibre e acqua; scarso valore nutritivo, poco apprezzato, quindi proposto raramente.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 60,
+    "name": "Sedano rapa",
+    "can_eat": true,
+    "description": "Buona fonte di carboidrati amidacei; crudo o cotto, moderare per ratti non in sovrappeso.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 61,
+    "name": "Soia",
+    "can_eat": true,
+    "description": "Da lattina o bollita, mai cruda per anti-nutrienti tossici.",
+    "quantity": "moderate",
+    "preparation": ["canned", "cooked"]
+  },
+  {
+    "id": 62,
+    "name": "Spinaci",
+    "can_eat": true,
+    "description": "Ricchi di ossalati; somministrare con moderazione (2–3 volte/settimana).",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 63,
+    "name": "Susina",
+    "can_eat": true,
+    "description": "Ricca di vitamina C e antiossidanti; molto zuccherina, premietto moderato. Rimuovere nocciolo.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked", "dried"]
+  },
+  {
+    "id": 64,
+    "name": "Taccola",
+    "can_eat": true,
+    "description": "Varietà di piselli; crudi o cotti. Ricca di fibre e vitamine B, buon aiuto per ratti a dieta.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 65,
+    "name": "Tarassaco",
+    "can_eat": true,
+    "description": "Ricco di ferro, calcio e vitamine K; buon equilibrio calcio/fosforo; 2–3 volte a settimana.",
+    "quantity": "rarely",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 66,
+    "name": "Topinambur",
+    "can_eat": true,
+    "description": "Ricco di carboidrati e proteine; zuccherino, moderare. Crudo (ben lavato) o cotto.",
+    "quantity": "rarely",
+    "preparation": ["raw", "cooked"]
+  },
+  {
+    "id": 67,
+    "name": "Trifoglio",
+    "can_eat": true,
+    "description": "Ricco di ferro, vitamine K, minerali e calcio; raccogliere lontano da strade/pesticidi.",
+    "quantity": "moderate",
+    "preparation": ["raw"]
+  },
+  {
+    "id": 68,
+    "name": "Uvetta",
+    "can_eat": true,
+    "description": "Molto zuccherina come tutti i passiti; da proporre con moderazione.",
+    "quantity": "rarely",
+    "preparation": ["raw", "dried"]
+  },
+  {
+    "id": 69,
+    "name": "Zucca",
+    "can_eat": true,
+    "description": "Ricca di fibre, minerali e vitamine, povera di grassi; cruda (poca) o cotta. Semi essiccati come premietti.",
+    "quantity": "moderate",
+    "preparation": ["raw", "cooked", "dried"]
+  },
+  {
+    "id": 70,
+    "name": "Zucchina",
+    "can_eat": true,
+    "description": "Molto apprezzata; somministrabile quotidianamente, cruda o cotta.",
+    "quantity": "free",
+    "preparation": ["raw", "cooked"]
   }
 ]

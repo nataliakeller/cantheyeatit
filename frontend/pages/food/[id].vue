@@ -70,12 +70,13 @@ const food = ref(null)
 const isLoading = ref(true)
 const error = ref('')
 
-const quantityList = [
-    { value: 'free', label: 'Freely' },
-    { value: 'moderate', label: 'In moderation' },
-    { value: 'rarely', label: 'Rarely' },
-    { value: 'never', label: 'Never' }
-]
+const quantityList = ref([
+  { value: 'free',     label: 'A volontà' },
+  { value: 'moderate', label: 'Con moderazione' },
+  { value: 'rarely',   label: 'Rarely' },
+  { value: 'treat',    label: 'Premietto' },
+  { value: 'never',    label: 'Never' }
+])
 
 const preparationList = [
     { value: 'raw', label: 'Crudo' },
@@ -95,6 +96,7 @@ const quantityColor = (value) => {
     switch (value) {
         case 'free': return 'green'
         case 'moderate': return 'amber'
+        case 'treat': return 'pink-accent-1'
         case 'rarely': return 'deep-orange'
         case 'never': return 'red'
         default: return 'grey'

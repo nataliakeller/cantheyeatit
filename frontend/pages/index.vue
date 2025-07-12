@@ -30,7 +30,7 @@
                     <v-card-actions>
                         <v-chip variant="elevated" :color="selectedFoodData.can_eat ? 'success' : 'error'"
                             :text="selectedFoodData.can_eat ? 'Safe to eat' : 'Not recommended'" />
-                        <v-chip variant="tonal" :color="getQuantityColor(selectedFoodData.quantity)"
+                        <v-chip :prepend-icon="selectedFoodData.quantity === 'treat' ? 'mdi-candy' : ''" variant="tonal" :color="getQuantityColor(selectedFoodData.quantity)"
                             :text="getQuantityLabel(quantityList, selectedFoodData.quantity)" />
                     </v-card-actions>
                 </v-card>
@@ -52,10 +52,11 @@ const selectedFoodData = ref(null)
 const loading = ref(false)
 const error = ref('')
 const quantityList = ref([
-    { value: 'free', label: 'Freely' },
-    { value: 'moderate', label: 'In moderation' },
-    { value: 'rarely', label: 'Rarely' },
-    { value: 'never', label: 'Never' }
+  { value: 'free',     label: 'A volontà' },
+  { value: 'moderate', label: 'Con moderazione' },
+  { value: 'rarely',   label: 'Rarely' },
+  { value: 'treat',    label: 'Premietto' },
+  { value: 'never',    label: 'Never' }
 ])
 
 const preparationList = ref([
@@ -99,6 +100,8 @@ const getQuantityColor = (quantity) => {
             return 'warning'
         case 'rarely':
             return 'deep-orange'
+        case 'treat':
+            return 'pink-accent-1'
         case 'never':
             return 'error'
         default:
