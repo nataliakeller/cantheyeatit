@@ -3,16 +3,16 @@
     "id": 1,
     "name": "Mela",
     "can_eat": true,
-    "description": "Buona per i ratti",
+    "description": "Senza semi. Ricca di vitamina C, ha proprietà antidiuretiche, poche calorie, utile contro la diarrea;",
     "quantity": "moderate",
     "preparation": ["raw"]
   },
   {
     "id": 2,
-    "name": "Cioccolato",
-    "can_eat": false,
-    "description": "Tossico per i ratti",
-    "quantity": "treat",
+    "name": "Cioccolato nero fondente",
+    "can_eat": true,
+    "description": "Non è mortale, ma da offrire solo in rarissime occasioni e in dosi minime.",
+    "quantity": "rarely",
     "preparation": []
   },
   {
@@ -84,7 +84,7 @@
     "name": "Banana",
     "can_eat": true,
     "description": "Ricca di potassio e calorie, utile per ratti in convalescenza o sotto farmaci; da limitare in caso di problemi renali.",
-    "quantity": "moderate",
+    "quantity": "treat",
     "preparation": ["raw", "cooked", "dried"]
   },
   {
@@ -204,7 +204,7 @@
     "name": "Ciliegie",
     "can_eat": true,
     "description": "Fonte di vitamina C e antiossidanti; molto zuccherine, togliere sempre il nocciolo perché contiene cianuro.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "cooked"]
   },
   {
@@ -220,7 +220,7 @@
     "name": "Cocco",
     "can_eat": true,
     "description": "Ricco di grassi buoni; ottimo premio o per ratti debilitati.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "dried"]
   },
   {
@@ -292,23 +292,23 @@
     "name": "Frutta (pere, fichi, prugne, pesche, uva, kiwi)",
     "can_eat": true,
     "description": "Ottima fonte di vitamine e minerali; molto zuccherina, togliere noccioli e dare come premio.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "dried"]
   },
     {
     "id": 38,
-    "name": "Frutta esotica (ananas, mango, papaya, passion fruit)",
+    "name": "Frutta esotica (mango, papaya, passion fruit)",
     "can_eat": true,
-    "description": "Molto zuccherina; proporre con moderazione. Mango non per maschi (alto D-limonene), semi tossici da rimuovere.",
-    "quantity": "rarely",
-    "preparation": ["raw"]
+    "description": "Mango non per i maschi. Molto zuccherina; proporre con moderazione. Mango non per maschi (alto D-limonene), semi tossici da rimuovere.",
+    "quantity": "treat",
+    "preparation": ["raw", "dried"]
   },
   {
     "id": 39,
     "name": "Frutta secca (noci, nocciole, mandorle)",
     "can_eat": true,
     "description": "Ricca di vitamine, proteine, Omega3/6; molto calorica e grassa, solo come premietto o per ratti debilitati.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "dried"]
   },
   {
@@ -356,7 +356,7 @@
     "name": "Mais",
     "can_eat": true,
     "description": "Molto apprezzato crudo o cotto; zuccherino, moderare come premietto. Deve essere per uso umano e biologico.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "cooked"]
   },
   {
@@ -388,7 +388,7 @@
     "name": "Melone",
     "can_eat": true,
     "description": "Antiossidante e diuretico; poche calorie ma molto zuccherino; moderare e perfetto in viaggio.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw"]
   },
   {
@@ -500,7 +500,7 @@
     "name": "Susina",
     "can_eat": true,
     "description": "Ricca di vitamina C e antiossidanti; molto zuccherina, premietto moderato. Rimuovere nocciolo.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "cooked", "dried"]
   },
   {
@@ -540,7 +540,7 @@
     "name": "Uvetta",
     "can_eat": true,
     "description": "Molto zuccherina come tutti i passiti; da proporre con moderazione.",
-    "quantity": "rarely",
+    "quantity": "treat",
     "preparation": ["raw", "dried"]
   },
   {
