@@ -9,11 +9,6 @@
                     <v-icon icon="mdi-list-box"></v-icon>
                 Lista
             </v-btn>
-
-            <v-btn stacked @click="navigateTo('/food/new')">
-                    <v-icon icon="mdi-plus-box"></v-icon>
-                Nuovo
-            </v-btn>
         </v-toolbar>
         <v-main>
             <slot />

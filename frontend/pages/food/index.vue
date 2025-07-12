@@ -23,7 +23,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn :to="`/food/${food.id}?view`" color="primary" variant="text">
+            <v-btn :to="`/food/${food.id}`" color="primary" variant="text">
               View Details
             </v-btn>
           </v-card-actions>
@@ -61,21 +61,11 @@ const getQuantityColor = (value) => {
   }
 }
 
-const deleteFood = async (id) => {
-  if (!confirm('Are you sure you want to delete this item?')) return;
-  try {
-    await foodsApi.delete(id)
-    foods.value = foods.value.filter(food => food.id !== id)
-  } catch (err) {
-    console.error(err)
-    error.value = 'Failed to delete food item.'
-  }
-}
 
 onMounted(async () => {
   try {
     const res = await foodsApi.getAll()
-    foods.value = res.foods || []
+    foods.value = res || []
   } catch (err) {
     console.error(err)
     error.value = 'Failed to load food list.'

@@ -92,7 +92,7 @@ const fetchFoods = async () => {
 
         const response = await foods.getAll()
 
-        foodItems.value = response.foods || []
+        foodItems.value = response || []
     } catch (err) {
         error.value = `Failed to fetch foods: ${err.message}`
         console.error('Error fetching foods:', err)
@@ -105,7 +105,7 @@ const fetchFoodDetails = async (foodId) => {
     loading.value = true
     try {
         const response = await foods.getById(foodId)
-        selectedFoodData.value = response.food
+        selectedFoodData.value = response
     } catch (err) {
         error.value = `Failed to fetch food details: ${err.message}`
         console.error('Error fetching food details:', err)

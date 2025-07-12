@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Mela",
+    "can_eat": true,
+    "description": "Buona per i ratti",
+    "quantity": "moderate"
+  },
+  {
+    "id": 2,
+    "name": "Cioccolato",
+    "can_eat": false,
+    "description": "Tossico per i ratti",
+    "quantity": "never"
+  }
+]
