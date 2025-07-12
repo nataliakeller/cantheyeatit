@@ -1,9 +1,5 @@
 <template>
     <v-card style="">
-        <v-card-title class="text-h5">
-            Can they eat it?
-        </v-card-title>
-
         <v-card-text>
             <v-autocomplete v-model="selectedFood" label="Type to search" placeholder="Search for food" clearable
                 hide-details variant="solo-filled" :items="foodItems" item-title="name" item-value="id"
