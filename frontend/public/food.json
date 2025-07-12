@@ -237,7 +237,7 @@
     "can_eat": true,
     "description": "Piccoli fagioli rossi, ricchi di minerali; possono essere germogliati, cotti o in scatola.",
     "quantity": "moderate",
-    "preparation": ["raw", "sprouted", "canned", "cooked"]
+    "preparation": ["raw", "canned", "cooked"]
   },
   {
     "id": 31,
@@ -253,7 +253,7 @@
     "can_eat": true,
     "description": "Piccoli fagioli verdi; possono essere germogliati, crudi, in scatola o cotti.",
     "quantity": "moderate",
-    "preparation": ["raw", "sprouted", "canned", "cooked"]
+    "preparation": ["raw", "canned", "cooked"]
   },
   {
     "id": 33,
@@ -333,7 +333,7 @@
     "can_eat": true,
     "description": "Ricchi di nutrienti, perfetti per ratti in crescita; ideali crudi. Spesso fagioli mung germogliati.",
     "quantity": "moderate",
-    "preparation": ["raw", "sprouted"]
+    "preparation": ["raw"]
   },
   {
     "id": 43,
@@ -349,7 +349,7 @@
     "can_eat": true,
     "description": "Crude, cotte o germogliate; buone proteine, carboidrati, ferro e vitamine B.",
     "quantity": "moderate",
-    "preparation": ["raw", "sprouted", "cooked"]
+    "preparation": ["raw", "cooked"]
   },
   {
     "id": 45,
